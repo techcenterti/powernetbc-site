@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powernet BC Telecom - Internet Fibra Óptica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Cores extraídas das fotos da fachada e escritório */
+            --azul-vibrante: #33b5e5; 
+            --azul-marinho: #1a237e;
+            --azul-escuro: #0a1128;
+            --branco: #ffffff;
+            --cinza-fundo: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--branco);
+            color: var(--azul-escuro);
+        }
+
+        /* Header */
+        header {
+            background: var(--branco);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo-img {
+            height: 70px; /* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--azul-escuro);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--azul-vibrante);
+        }
+
+        .btn-central {
+            background: var(--azul-vibrante);
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* Hero com degradê das fotos */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-vibrante) 0%, var(--azul-marinho) 100%);
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 40px; opacity: 0.9; }
+
+        /* Planos */
+        .planos-container {
+            padding: 80px 5%;
+            background-color: var(--cinza-fundo);
+        }
+
+        .grid-planos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: -120px;
+        }
+
+        .card-plano {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 6px solid var(--azul-vibrante);
+            transition: transform 0.3s;
+        }
+
+        .card-plano:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-plano .mega { font-size: 2.5rem; font-weight: 800; color: var(--azul-marinho); }
+        .card-plano .preco { font-size: 3rem; font-weight: 800; margin: 20px 0; color: var(--azul-vibrante); }
+        .card-plano .preco span { font-size: 1.2rem; }
+
+        .btn-whats {
+            display: block;
+            background: var(--azul-vibrante);
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        /* Seção Escritório */
+        .escritorio {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .info-box {
+            background: var(--azul-escuro);
+            color: white;
+            padding: 50px;
+            border-radius: 30px;
+            display: inline-block;
+            max-width: 800px;
+        }
+
+        .social-links a {
+            color: var(--azul-vibrante);
+            font-size: 2.5rem;
+            margin: 0 15px;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            header { flex-direction: column; padding: 20px; }
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Powernet BC Telecom" class="logo-img">
+        <nav>
+            <ul>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="https://wa.me/559881775698" target="_blank">Orçamento</a></li>
+                <li><a href="https://instagram.com/powernetbctelecom" target="_blank">Instagram</a></li>
+                <li><a href="https://powernetbc.sgp.tsmx.com.br/accounts/central/login" class="btn-central" target="_blank">Área do Cliente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Você ligado ao mundo.</h1>
+        <p>A melhor fibra óptica de Buriticupu com ultra velocidade e estabilidade.</p>
+    </section>
+
+    <div id="planos" class="planos-container">
+        <div class="grid-planos">
+            <div class="card-plano">
+                <p>MEGA HOME</p>
+                <div class="mega">200MB</div>
+                <div class="preco"><span>R$</span> 80,00</div>
+                <ul style="list-style: none; text-align: left; margin-bottom: 20px;">
+                    <li><i class="fas fa-check" style="color:var(--azul-vibrante)"></i> Fibra Óptica High-Speed</li>
+                    <li><i class="fas fa-check" style="color:var(--azul-vibrante)"></i> Wi-Fi Incluso</li>
+                </ul>
+                <a href="https://wa.me/559881775698?text=Quero contratar o plano de 200MB" class="btn-whats">CONTRATAR AGORA</a>
+            </div>
+
+            <div class="card-plano" style="transform: scale(1.05); border-color: var(--azul-marinho);">
+                <p><strong>MEGA BLACK</strong></p>
+                <div class="mega">600MB</div>
+                <div class="preco"><span>R$</span> 100,00</div>
+                <p><em>O Plano mais pedido!</em></p>
+                <a href="https://wa.me/559881775698?text=Quero contratar o plano de 600MB" class="btn-whats" style="background: var(--azul-marinho);">CONTRATAR AGORA</a>
+            </div>
+
+            <div class="card-plano">
+                <p>MEGA ULTRA</p>
+                <div class="mega">750MB</div>
+                <div class="preco"><span>R$</span> 130,00</div>
+                <ul style="list-style: none; text-align: left; margin-bottom: 20px;">
+                    <li><i class="fas fa-check" style="color:var(--azul-vibrante)"></i> Ideal para Gamers e Streamers</li>
+                    <li><i class="fas fa-check" style="color:var(--azul-vibrante)"></i> Suporte Prioritário</li>
+                </ul>
+                <a href="https://wa.me/559881775698?text=Quero contratar o plano de 750MB" class="btn-whats">CONTRATAR AGORA</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="escritorio">
+        <div class="info-box">
+            <h2>Visite nossa sede</h2>
+            <p style="margin: 15px 0;">R. Principal, 333, Terra Bela, Buriticupu - MA, 65393-000</p>
+            <div class="social-links">
+                <a href="https://instagram.com/powernetbctelecom" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/559881775698" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Powernet BC Telecom - Buriticupu/MA</p>
+    </footer>
+
+    <a href="https://wa.me/559881775698" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
